@@ -6,14 +6,14 @@ def calculate_average(scores):
 def main():
     # create an empty list to store the scores
     scores = []
-
-    for i in range(1, 8):
-        try:
-          score = float(input(f"Enter score for subject {i}: "))
-          scores.append(score)
-        except:
+    try:
+     score = float(input(f"Enter score for subject {i}: "))
+    except:
             print("Invalid input. Please enter a valid numerical score.")
-        return
+    for i in range(1,int(score)+1):    
+          scores.append(score)
+      
+        
 
     # Calculate and display the average score
     average = calculate_average(scores)
